@@ -7,6 +7,10 @@ def get_language(args):
         return 'python3'
     elif file_path.endswith('.js'):
         return 'node'
+    elif file_path.endswith(".go"):
+        return "go run"
+    elif file_path.endswith(".rb"):
+        return "ruby"
     elif file_path.endswith('.java'):
         return 'javac'
     elif file_path.endswith('.class'):
@@ -32,6 +36,11 @@ def get_error(error, language):
             return error.split('\n')[-2].strip()
     elif language == 'node':
         return error.split('\n')[4][1:]
+    elif language == 'go run':
+        return error.split('\n')[1].split(": ", 1)[1][1:]
+    elif language == "ruby":
+        error_message = error.split('\n')[0]
+        return error_message[error_message.rfind(": ") + 2:]
     elif language == 'javac':
         m = re.search(r'.*error:(.*)', error.split('\n')[0])
         return m.group(1) if m else None

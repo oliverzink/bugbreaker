@@ -54,6 +54,7 @@ def execute_code(args, language):
     pipe_queue.put(None)
 
     errors = ''.join(errors)
+    # print(errors)
 
     if 'java' != command[0] and not os.path.isfile(command[1]):
         return None
