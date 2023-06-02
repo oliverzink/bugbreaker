@@ -1,5 +1,5 @@
 
-## Bugbreaker is a command line tool that explains errors messages you get when compiling/running your code. To view more about the tool and to get download instructions view [bugbreaker.ai](https://www.bugbreaker.ai)
+## Bugbreaker is a command line tool that explains errors messages when compiling/running your code. View more about the tool and get download instructions at [bugbreaker.ai](https://www.bugbreaker.ai)
 
 [click here to view the repo for the nextjs website](https://github.com/oliverzink/bugbreakerweb)
 
